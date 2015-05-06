@@ -1,2 +1,10 @@
-# myLED
-Python script use in sysV
+# myLED + myMonitoring
+
+Guess your scripts are in /opt/scripts
+
+Add in personnal crontab ($ crontab -e) :
+* * * * * /opt/scripts/myMonitoring.sh >> /dev/null 2>&1
+
+And in /etc/crontab :
+@reboot root    /opt/scripts/myMonitoring.sh
+
